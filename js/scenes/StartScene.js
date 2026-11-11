@@ -6,14 +6,14 @@ export default class StartScene extends Phaser.Scene {
   create() {
     this.cameras.main.setBackgroundColor('#1d2a22');
 
-    this.add.text(640, 255, '떡 하나 주면 안 잡아먹지', {
+    this.add.text(270, 340, '떡 하나 주면 안 잡아먹지', {
       color: '#fff7df',
       fontFamily: 'sans-serif',
-      fontSize: '52px',
+      fontSize: '32px',
       fontStyle: 'bold',
     }).setOrigin(0.5);
 
-    const startButton = this.add.text(640, 425, '시작', {
+    const startButton = this.add.text(270, 540, '시작', {
       backgroundColor: '#d98a3d',
       color: '#ffffff',
       fontFamily: 'sans-serif',

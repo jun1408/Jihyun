@@ -5,8 +5,8 @@ import ResultScene from './scenes/ResultScene.js';
 new Phaser.Game({
   type: Phaser.AUTO,
   parent: 'game',
-  width: 1280,
-  height: 720,
+  width: 540,
+  height: 960,
   backgroundColor: '#1d2a22',
   scale: {
     mode: Phaser.Scale.FIT,

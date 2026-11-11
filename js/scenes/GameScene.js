@@ -19,13 +19,13 @@ export default class GameScene extends Phaser.Scene {
 
     this.cameras.main.setBackgroundColor('#36543b');
 
-    this.add.text(640, 80, `${this.gameState.stage} 스테이지`, {
+    this.add.text(270, 120, `${this.gameState.stage} 스테이지`, {
       color: '#fff7df',
       fontFamily: 'sans-serif',
       fontSize: '30px',
     }).setOrigin(0.5);
 
-    this.add.text(640, 360, '플레이 화면', {
+    this.add.text(270, 480, '플레이 화면', {
       color: '#ffffff',
       fontFamily: 'sans-serif',
       fontSize: '42px',

@@ -4,3 +4,4 @@
 2026-11-11 16:21 / 기본 모듈 구조 분리 / js/state/GameState.js, js/input/PlayerInput.js, js/combat/CombatSystem.js, js/building/BuildingSystem.js, js/scenes/GameScene.js, tasks.md, prompt.txt, work-log.md / 기존 장면 전환을 유지하면서 입력·상태·전투·건축의 책임 경계를 별도 모듈로 마련함.
 2026-11-11 16:35 / 모바일 2D 생존 게임 명세와 작업 목록 갱신 / spec.md, tasks.md, prompt.txt, work-log.md / 관찰자 시점과 1인칭 2D 행동 화면 전환을 중심으로 자원·전투·방향별 벽 건축 흐름을 재정의함.
 2026-11-11 16:39 / 세 맵과 30일 건축 해금 조건 반영 / spec.md, tasks.md, prompt.txt, work-log.md / 맵별 생존 후 건축하는 진행 구조를 세 개의 가상 지역과 순차 완료 조건으로 구체화함.
+2026-11-11 16:44 / 모바일 세로 화면 비율 적용 / index.html, js/main.js, js/scenes/StartScene.js, js/scenes/GameScene.js, js/scenes/ResultScene.js, tasks.md, prompt.txt, work-log.md / 540×960 캔버스와 세로 레이아웃으로 기존 장면 전환을 유지하면서 모바일 화면 기준을 맞춤.
