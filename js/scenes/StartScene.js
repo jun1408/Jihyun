@@ -1,3 +1,5 @@
+import { ASSETS, MAPS, preloadImages } from '../assets/AssetCatalog.js';
+
 const COLORS = {
   forest: 0x5fa85b,
   sky: 0xf6e7b5,
@@ -11,9 +13,17 @@ export default class StartScene extends Phaser.Scene {
     super('StartScene');
   }
 
+  preload() {
+    preloadImages(this);
+  }
+
   create() {
     this.cameras.main.setBackgroundColor(COLORS.sky);
-    this.drawLandscape();
+    this.add.image(270, 480, MAPS[0].observerDay).setDisplaySize(540, 960);
+    this.add.rectangle(270, 232, 480, 260, COLORS.sky, 0.88)
+      .setStrokeStyle(5, COLORS.earth);
+    this.add.image(126, 650, ASSETS.baseCamp).setScale(0.34);
+    this.add.image(430, 650, ASSETS.playerObserver).setScale(0.34);
 
     this.add.text(270, 292, '떡 하나 주면\n안 잡아먹지', {
       align: 'center',
@@ -31,33 +41,6 @@ export default class StartScene extends Phaser.Scene {
     }).setOrigin(0.5);
 
     this.createStartButton();
-  }
-
-  drawLandscape() {
-    const graphics = this.add.graphics();
-
-    graphics.fillStyle(COLORS.orange, 1);
-    graphics.fillCircle(425, 138, 48);
-
-    graphics.fillStyle(COLORS.forest, 1);
-    graphics.fillTriangle(0, 560, 255, 370, 540, 560);
-    graphics.fillTriangle(80, 590, 365, 415, 540, 590);
-    graphics.fillRect(0, 555, 540, 405);
-
-    graphics.fillStyle(COLORS.earth, 1);
-    graphics.fillRect(0, 822, 540, 138);
-
-    this.drawTree(graphics, 92, 635, 0.9);
-    this.drawTree(graphics, 454, 650, 1.1);
-  }
-
-  drawTree(graphics, x, y, scale) {
-    graphics.fillStyle(COLORS.earth, 1);
-    graphics.fillRoundedRect(x - 14 * scale, y, 28 * scale, 78 * scale, 8 * scale);
-    graphics.fillStyle(COLORS.forest, 1);
-    graphics.fillCircle(x, y - 8 * scale, 48 * scale);
-    graphics.fillCircle(x - 32 * scale, y + 20 * scale, 34 * scale);
-    graphics.fillCircle(x + 32 * scale, y + 20 * scale, 34 * scale);
   }
 
   createStartButton() {

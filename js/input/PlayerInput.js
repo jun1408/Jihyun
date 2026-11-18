@@ -1,5 +1,11 @@
 export default class PlayerInput {
   constructor(scene) {
-    this.cursors = scene.input.keyboard.createCursorKeys();
+    this.scene = scene;
+  }
+
+  bind(target, callback) {
+    target.setInteractive({ useHandCursor: true });
+    target.on('pointerdown', callback);
+    return target;
   }
 }
