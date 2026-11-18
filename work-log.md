@@ -5,3 +5,9 @@
 2026-11-11 16:35 / 모바일 2D 생존 게임 명세와 작업 목록 갱신 / spec.md, tasks.md, prompt.txt, work-log.md / 관찰자 시점과 1인칭 2D 행동 화면 전환을 중심으로 자원·전투·방향별 벽 건축 흐름을 재정의함.
 2026-11-11 16:39 / 세 맵과 30일 건축 해금 조건 반영 / spec.md, tasks.md, prompt.txt, work-log.md / 맵별 생존 후 건축하는 진행 구조를 세 개의 가상 지역과 순차 완료 조건으로 구체화함.
 2026-11-11 16:44 / 모바일 세로 화면 비율 적용 / index.html, js/main.js, js/scenes/StartScene.js, js/scenes/GameScene.js, js/scenes/ResultScene.js, tasks.md, prompt.txt, work-log.md / 540×960 캔버스와 세로 레이아웃으로 기존 장면 전환을 유지하면서 모바일 화면 기준을 맞춤.
+2026-11-18 15:48 / 게임 디자인 가이드 작성 / design.md, prompt.txt, work-log.md / 명세의 모바일 2D 생존·관찰자 및 행동 시점 전환에 맞춰 제한된 팔레트와 단순한 카툰 UI 기준을 정의함.
+2026-11-18 15:56 / 화면 중앙 정렬 및 전투 조작·색상 기준 갱신 / index.html, spec.md, tasks.md, design.md, prompt.txt, work-log.md / 캔버스가 부모 너비의 중앙에 고정되도록 하고, 최대 5색 팔레트 안에서 해·동물 강도와 화면 직접 공격 방식을 일관되게 정의함.
+2026-11-18 15:57 / 디자인 가이드 기반 시작 화면 개선 / js/scenes/StartScene.js, prompt.txt, work-log.md / 시작 화면에만 제한된 팔레트의 낮 풍경, 둥근 카툰 나무와 입체감 있는 큰 시작 버튼을 적용함.
+2026-11-18 16:03 / 이미지 생성용 배경·캐릭터 프롬프트 작성 / image-prompts.md, prompt.txt, work-log.md / 세 맵의 관찰자 배경과 플레이어 캐릭터가 동일한 5색 카툰 스타일을 유지하도록 생성 조건을 구체화함.
+2026-11-18 16:08 / 맵별 낮·밤 색상 프롬프트 조정 / image-prompts.md, prompt.txt, work-log.md / 숲과 고원은 낮·밤 변형을 분리하고 협곡은 시간대와 무관한 남색 중심 배경으로 정의함.
+2026-11-18 16:10 / 캐릭터 프롬프트 색상 제한 / image-prompts.md, prompt.txt, work-log.md / 플레이어 캐릭터와 단색 배경에서 갈색·남색·녹색만 쓰도록 명시해 배경과 구분되는 제한된 색 체계를 적용함.
