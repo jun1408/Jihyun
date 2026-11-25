@@ -20,3 +20,5 @@
 2026-11-25T16:09:47+09:00 / 원스토어 웹게임 SDK 기본 연동 / index.html, js/main.js / spec.md 출시 항목 기준: SDK 로드→init→progress→startGameAsync 흐름, err 시 일반 브라우저로 간주해 바로 게임 시작, pause/resume 처리, 광고·결제 미포함
 
 2026-11-25T16:46:34+09:00 / SDK 로드 실패 시 게임 미시작 버그 수정 / index.html / 정적 import → 동적 import().catch()로 변경: 로컬(Live Server) 환경에서 CDN 접근 불가 시에도 startWithoutSdk() 호출로 게임 정상 시작
+
+2026-11-25T16:54:41+09:00 / GitHub Pages에서 빈 화면 버그 수정 / index.html / initializeAsync가 GitHub Pages(실제 HTTPS)에서 응답 없이 멈추는 현상 → Promise.race()로 3초 타임아웃 추가

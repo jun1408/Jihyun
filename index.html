@@ -48,7 +48,12 @@
           });
           sdk.on("exit", () => {});
 
-          sdk.initializeAsync()
+          // 원스토어 앱 외부(GitHub Pages 등)에서 initializeAsync가
+          // 응답 없이 멈추는 경우를 대비해 3초 타임아웃
+          const timeout = new Promise((resolve) =>
+            setTimeout(() => resolve({ err: 'timeout' }), 3000)
+          );
+          Promise.race([sdk.initializeAsync(), timeout])
             .then((info) => {
               if (info.err) {
                 // 원스토어 앱 외부(일반 브라우저) → SDK 없이 바로 시작
