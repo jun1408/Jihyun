@@ -26,6 +26,39 @@
         margin: auto;
       }
     </style>
+    <script type="module">
+      import { createSDK } from "https://h5sdk.onestore.net/lib/v1.2.0/onestore-h5-sdk.min.js";
+
+      const sdk = createSDK();
+
+      function startWithoutSdk() {
+        if (window.ONEStoreReady) return;
+        window.ONEStoreReady = true;
+        document.dispatchEvent(new Event("onestore:ready"));
+      }
+
+      // 라이프사이클 — initializeAsync 이전에 등록
+      sdk.on("pause", () => {
+        document.dispatchEvent(new Event("onestore:pause"));
+      });
+      sdk.on("resume", () => {
+        document.dispatchEvent(new Event("onestore:resume"));
+      });
+      sdk.on("exit", () => {});
+
+      sdk.initializeAsync()
+        .then((info) => {
+          if (info.err) {
+            // 원스토어 앱 외부(일반 브라우저) → SDK 없이 바로 시작
+            startWithoutSdk();
+            return;
+          }
+          // 원스토어 앱 내부
+          window._oneStoreSDK = sdk;
+          document.dispatchEvent(new Event("onestore:init"));
+        })
+        .catch(() => startWithoutSdk());
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
   </head>
   <body>
