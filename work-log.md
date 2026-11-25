@@ -13,3 +13,6 @@
 2026-11-18 16:10 / 캐릭터 프롬프트 색상 제한 / image-prompts.md, prompt.txt, work-log.md / 플레이어 캐릭터와 단색 배경에서 갈색·남색·녹색만 쓰도록 명시해 배경과 구분되는 제한된 색 체계를 적용함.
 2026-11-18 16:38 / 게임 이미지 자산 목록 검토 / prompt.txt, work-log.md / 명세와 디자인을 기준으로 관찰자·1인칭 화면, 적, 자원, 전투 표현에 필요한 이미지와 코드로 처리할 요소를 구분함.
 2026-11-18 16:56 / 게임용 이미지 자산 21종 생성 / assets/images/*.png, prompt.txt, work-log.md / 명세와 디자인 팔레트에 맞춰 관찰자·1인칭 배경 10종과 투명 캐릭터·자원·검·동물 스프라이트 11종을 생성하고 규격과 알파 채널을 검증함.
+2026-11-18 17:03 / 게임 이미지 자산의 화면 적용 / js/assets/AssetCatalog.js, js/scenes/StartScene.js, js/scenes/GameScene.js, js/state/GameState.js, js/input/PlayerInput.js, prompt.txt, work-log.md / 자산 경로를 모듈화하고 시작·관찰자·방향 행동·전투·건축 화면에 이미지를 연결했으며 브라우저 검증이 중단되어 tasks.md 항목은 체크하지 않음.
+
+2026-11-25T16:05:27+09:00 / spec.md 맨 아래에 '## 출시' 항목 추가 / spec.md / 요청한 네 항목(GitHub Pages, 원스토어 SDK 기본 연동, 일반 브라우저 플레이, 광고·결제 미포함)만 최소한으로 기재
